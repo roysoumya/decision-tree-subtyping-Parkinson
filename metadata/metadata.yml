@@ -1,0 +1,37 @@
+metadata_version: 1
+name: Decision Tree-based Approach to Robust Parkinson's Disease Subtyping using Clinical
+  Data of the Michael J. Fox Foundation LRRK2 Cross-sectional Study
+description: 'Parkinson''s Disease (PD) is a complex neurodegenerative disorder with
+  high heterogeneity in clinical symptoms (motor and non-motor), progression course,
+  treatment response, and genetic factors. Thus, PD subtyping aims to improve disease
+  mechanism understanding and helps to facilitate targeted interventions or treatment
+  regimens. Data-driven PD subtyping is typically done using cluster analysis, but
+  such studies face difficulty from widespread adoption in clinical practice due to
+  the following issues: (i) results are quite sensitive to study design, and actual
+  subtype rules are not quite interpretable, (ii) results are not robustly replicable
+  across multiple datasets, and most studies focus on a single dataset. In this paper,
+  we aim to identify novel PD subtypes using an interpretable decision-tree-based
+  method that is robustly reproducible in an independent PD cohort. We first train
+  a decision tree binary classifier on the LRRK2 Cross-sectional Study dataset to
+  determine whether a PD patient has early or late onset PD. Each leaf of the learned
+  decision tree is considered a candidate subtype and by tracing the path in the tree
+  subtyping rules can be established. We undertake a significant annotation effort
+  for mapping features between the LRRK2 dataset and an independent PD cohort (the
+  first validation study of the Movement Disorder Society Non-Motor Rating Scale,
+  which will be referred to as MDS data) that is used for external validation for
+  the identified subtypes. To ensure validity, the candidate subtypes are subjected
+  to two stages of filtering based on both LRRK2 and MDS data. We finally obtained
+  six novel subtypes (one primarily early onset, three primarily late onset, and two
+  mixed onset) that are clinically consistent and sufficiently large (in terms of
+  patient count) across both training (LRRK2) and external validation (MDS) datasets.
+  Finally, a clinical characterization study showed that the following clinical features
+  may be the most important diagnostic markers for our six detected subtypes: (i)
+  persistent asymmetry affecting the side of onset most, (ii) clinical course of 10
+  years or more, and (iii) postural instability not caused by other dysfunction.'
+authors:
+- name: Soumyadeep Roy
+  affiliations:
+  - name: Indian Institute of Technology Kharagpur
+corresponding_contributor:
+  name: Dominik Wolff
+  email: Dominik.Wolff@plri.de
