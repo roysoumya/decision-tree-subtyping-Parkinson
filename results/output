@@ -1,4 +1,0 @@
-+ jupyter nbconvert --to html --ExecutePreprocessor.allow_errors=True --ExecutePreprocessor.timeout=-1 --FilesWriter.build_directory=../results --execute DecisionTreeModel_SubtypingWithHyperparametertuning5thFeb2024_cleaned.ipynb
-[NbConvertApp] Converting notebook DecisionTreeModel_SubtypingWithHyperparametertuning5thFeb2024_cleaned.ipynb to html
-[NbConvertApp] WARNING | Alternative text is missing on 2 image(s).
-[NbConvertApp] Writing 1998376 bytes to ../results/DecisionTreeModel_SubtypingWithHyperparametertuning5thFeb2024_cleaned.html
