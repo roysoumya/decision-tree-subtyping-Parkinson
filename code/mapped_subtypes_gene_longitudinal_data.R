@@ -4,7 +4,7 @@ library(dplyr)
 lrrk2_id_subtype_map= lrrk2_sub_data1 %>% select(lrrkid, subtype_id)
 
 # read genetic data patients
-gene_data_available= read.csv(file = "gene_lrrkid_available_Feb2022.csv", header = TRUE, stringsAsFactors = FALSE)
+gene_data_available= read.csv(file = "gene_lrrkid_available.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # overlap between patients of proposed six subtypes and patients with available genetic data
 overlap_lrrkids_gene_data= intersect(lrrk2_id_subtype_map$lrrkid, gene_data_available$lrrkid)

@@ -1,6 +1,6 @@
 library(dplyr)
 
-lrrk2_subtype_data= read.csv(file = "lrrk2_pos_data_miss30_subtype_id_mapped_March29_2023.csv", header = TRUE, stringsAsFactors = FALSE)
+lrrk2_subtype_data= read.csv(file = "lrrk2_pos_data_miss30_subtype_id_mapped.csv", header = TRUE, stringsAsFactors = FALSE)
 
 lrrk2_subtype_data= lrrk2_subtype_data
 
@@ -25,7 +25,7 @@ total_features= union(common_features, imp_features)
 
 lrrk_sub_data2= lrrk2_sub_data1 %>% select(total_features) %>% arrange(subtype_id, lrrkid)
 
-write.csv(lrrk_sub_data2, file = "lrrk2_diag_chk_analysis_subtypes_29thMarch2023.csv", row.names = FALSE)
+write.csv(lrrk_sub_data2, file = "lrrk2_diag_chk_analysis_subtypes.csv", row.names = FALSE)
 
 # summary of age of assessment, age of PD onset
 lrrk_sub_summ_data= lrrk_sub_data2 %>% group_by(subtype_id)  %>% summarise(present_age_mean= mean(demopd_ageassess, na.rm = TRUE), present_age_sd= sd(demopd_ageassess, na.rm=TRUE), ageonset_mean= mean(ageonset, na.rm = TRUE), ageonset_sd= sd(ageonset, na.rm=TRUE), count= n())
@@ -44,7 +44,7 @@ lrrk2_sub_data3$AUNOERLY = as.numeric(lrrk2_sub_data3$AUNOERLY)
 
 lrrk_diag_summ_data= lrrk2_sub_data3 %>% group_by(subtype_id) %>% summarise(pat_count= n(), DCBRADY_sum= sum(DCBRADY, na.rm = TRUE), DCRIGID_sum= sum(DCRIGID, na.rm = TRUE),DCRTREM_sum= sum(DCRTREM, na.rm = TRUE),MPTPEXP_sum= sum(MPTPEXP, na.rm = TRUE),BABINSKI_sum= sum(BABINSKI, na.rm = TRUE),NELEONSX_sum= sum(NELEONSX, na.rm = TRUE),AUNOERLY_sum= sum(AUNOERLY, na.rm = TRUE),RTRMHZ_sum= sum(RTRMHZ, na.rm = TRUE),DCPRGDIS_sum= sum(DCPRGDIS, na.rm = TRUE),DCASYMM_sum= sum(DCASYMM, na.rm = TRUE),DCLDOPCH_sum= sum(DCLDOPCH, na.rm = TRUE),DCPD10Y_sum= sum(DCPD10Y, na.rm = TRUE),HXENCEPH_sum= sum(HXENCEPH, na.rm = TRUE),DCPOSINS_sum= sum(DCPOSINS, na.rm = TRUE),STRKSTPD_sum= sum(STRKSTPD, na.rm = TRUE),SUSTRMS_sum= sum(SUSTRMS, na.rm = TRUE),OGC_sum= sum(OGC, na.rm = TRUE),SGPSVSAC_sum= sum(SGPSVSAC, na.rm = TRUE),CERESIGN_sum= sum(CERESIGN, na.rm = TRUE),HXUNIL3Y_sum= sum(HXUNIL3Y, na.rm = TRUE),lrrk2sub_sum= sum(lrrk2sub, na.rm = TRUE))
 
-write.csv(lrrk_diag_summ_data, file = "lrrk_diag_summary_stats_March30_2023.csv", row.names = FALSE)
+write.csv(lrrk_diag_summ_data, file = "lrrk_diag_summary_stats.csv", row.names = FALSE)
 
 
 
@@ -53,7 +53,7 @@ write.csv(lrrk_diag_summ_data, file = "lrrk_diag_summary_stats_March30_2023.csv"
 
 
 
-training_data= read.csv(file = "lrrk2_data_27thFeb2023_analysis.csv", header = TRUE, stringsAsFactors = FALSE)
+training_data= read.csv(file = "lrrk2_data_analysis.csv", header = TRUE, stringsAsFactors = FALSE)
 
 total_data_boundary= subset(training_data, ageonset >45 & ageonset < 55) # 94 observations
 
@@ -80,7 +80,7 @@ lrrk_all_stats_diag_summ_data_T = lrrk_all_stats_diag_summ_data_T %>% mutate(nor
 
 #------ LRRK2 all features analysis 397 patients MDS-UPDRS features ------------
 
-lrrk2_mdsupdrs_all_features= read.csv(file = "lrrk2_all_features_mdsupdrs_subset_April21_2023.csv", header = TRUE, stringsAsFactors = FALSE)
+lrrk2_mdsupdrs_all_features= read.csv(file = "lrrk2_all_features_mdsupdrs_subset.csv", header = TRUE, stringsAsFactors = FALSE)
 
 lrrk_all_stats= lrrk2_mdsupdrs_all_features
 # summary of age of assessment, age of PD onset

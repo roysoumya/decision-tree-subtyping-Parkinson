@@ -1,6 +1,6 @@
 library(dplyr)
 
-lrrk_sub_data2= read.csv(file = "../data/lrrk2_nonmotor_part1_analysis_subtypes_10thFeb2024.csv", header = TRUE, stringsAsFactors = FALSE)
+lrrk_sub_data2= read.csv(file = "../data/lrrk2_nonmotor_part1_analysis_subtypes.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # summary of non-motor features
 # Assuming df is your dataframe

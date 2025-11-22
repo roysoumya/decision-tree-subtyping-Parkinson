@@ -1,6 +1,6 @@
 library(dplyr)
 
-lrrk_sub_data2 = read.csv(file = "../data/violin_plot_data_each_subtype_Feb11_2024.csv", header = TRUE, stringsAsFactors = FALSE)
+lrrk_sub_data2 = read.csv(file = "../data/violin_plot_data_each_subtype.csv", header = TRUE, stringsAsFactors = FALSE)
 
 library(vioplot)
 
